@@ -32,13 +32,11 @@ public class Password {
             return false;
         }
         for (int i = 0; i < passToCharArray.length - 1; i++) {      // "11abcde"
-            for (int j = i + 1; j <= i + 1; j++) {
-                if (Character.isDigit(passToCharArray[i]) && Character.isDigit(passToCharArray[j])) {
-                    return false;
-                }
+            if (Character.isDigit(passToCharArray[i]) && Character.isDigit(passToCharArray[i + 1])) {
+                return false;
             }
-
         }
+
         return true;
     }
 
